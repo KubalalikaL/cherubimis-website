@@ -1,17 +1,22 @@
-/* django_app/core/static/css/styles.css */
-
 /* Global resets & defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body {
+  height: 100%;
 }
 
+
 body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #333;
   background-color: #fefefe;
   line-height: 1.5;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Header */
@@ -59,7 +64,7 @@ body {
 /* Hero Section */
 .hero-section {
   min-height: 70vh;
-  background: url('https://via.placeholder.com/1600x900') center/cover no-repeat;
+  background: url('../images/banner3.jpg') center left / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +75,7 @@ body {
 
 .hero-text-container {
   max-width: 700px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(48, 62, 73, 0.6);
   padding: 2rem;
   border-radius: 10px;
 }
@@ -143,7 +148,7 @@ body {
 /* Info Section */
 .info-section {
   padding: 3rem 1rem;
-  background: #fff;
+  background: rgb(233 242 255);
   text-align: center;
 }
 
@@ -203,11 +208,224 @@ body {
 
 /* Footer */
 .main-footer {
+  flex-shrink: 0;
   text-align: center;
   background: #333;
   color: #fff;
   padding: 1rem;
 }
+
+
+/* Partners Section */
+.partners-section {
+  background-color: #f7f7f7;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.partners-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.partner-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.partner-item:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.partner-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero / Banner for Services Page */
+.services-hero {
+  background: url('../images/services.jpg') center/cover no-repeat;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.services-hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.services-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.services-hero-content p {
+  font-size: 1.2rem;
+}
+
+/* Services Overview */
+.services-overview {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f7f7f7;
+}
+
+.services-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services-overview p {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* Services Cards */
+/* Services Cards - Display 3 cards per row on larger screens */
+.services-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Controls spacing between cards */
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  justify-items: center; /* Centers the cards horizontally */
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px; /* Ensure a max width so cards aren't too wide */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.service-card-image {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.service-card-image img {
+  max-width: 100px;
+  height: auto;
+}
+
+.service-card-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.service-card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-card-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  /* When screen is below 1200px wide, go down to 2 columns */
+  .services-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* When screen is below 768px wide, go down to 1 column */
+  .services-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    max-width: 400px; /* To keep a nice width on mobile/tablets */
+  }
+}
+
+/* CTA Section */
+.services-cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f7f7f7;
+}
+
+.services-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services-cta p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Buttons */
+.btn-secondary {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #0056b3;
+}
+
+/* Responsive - Mobile Adjustments */
+@media (max-width: 768px) {
+  .services-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
 
 /* Responsive - Mobile First */
 @media (max-width: 768px) {
@@ -223,3 +441,116 @@ body {
     align-items: center;
   }
 }
+
+/* Info Section / Why Choose Us */
+.info-section {
+  background-color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-subtext {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.info-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  justify-items: center;
+}
+
+.info-feature {
+  position: relative;
+  width: 380px;                 
+  min-height: 320px;            
+  margin: 0 auto 2rem;          
+  background-color: rgba(73, 166, 238, 0.6);      
+  border: 2px solid #4a4a4bfa;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;  
+  overflow: hidden;   
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.info-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgb(4, 23, 196);
+}
+
+/* If you have an icon or image at the top (info-feature-icon) */
+.info-feature-icon {
+  margin-bottom: 1rem;
+}
+
+.info-feature-icon img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Headings & text inside the card */
+.info-feature-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.info-feature-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+/* CTA Sub-section */
+.info-cta {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-cta h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.info-cta p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .info-features {
+    grid-template-columns: 1fr;
+  }
+  .info-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-feature-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .info-feature-content {
+    text-align: center;
+  }
+}
+
