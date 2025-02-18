@@ -148,7 +148,7 @@ main {
 /* Info Section */
 .info-section {
   padding: 3rem 1rem;
-  background: #fff;
+  background: rgb(233 242 255);
   text-align: center;
 }
 
@@ -441,3 +441,116 @@ main {
     align-items: center;
   }
 }
+
+/* Info Section / Why Choose Us */
+.info-section {
+  background-color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-subtext {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.info-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  justify-items: center;
+}
+
+.info-feature {
+  position: relative;
+  width: 380px;                 
+  min-height: 320px;            
+  margin: 0 auto 2rem;          
+  background-color: rgba(73, 166, 238, 0.6);      
+  border: 2px solid #4a4a4bfa;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;  
+  overflow: hidden;   
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.info-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgb(4, 23, 196);
+}
+
+/* If you have an icon or image at the top (info-feature-icon) */
+.info-feature-icon {
+  margin-bottom: 1rem;
+}
+
+.info-feature-icon img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Headings & text inside the card */
+.info-feature-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.info-feature-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+/* CTA Sub-section */
+.info-cta {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-cta h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.info-cta p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .info-features {
+    grid-template-columns: 1fr;
+  }
+  .info-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-feature-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .info-feature-content {
+    text-align: center;
+  }
+}
+
