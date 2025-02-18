@@ -1,0 +1,116 @@
+/* Global resets and defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .main-header {
+    background-color: #f9f9f9;
+    padding: 1rem;
+  }
+  
+  .logo-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-container {
+    display: inline-block;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular logo */
+  }
+  
+  /* Navigation Menu */
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #007BFF; /* Subtle hover effect */
+  }
+  
+  /* Welcome Banner */
+  .welcome-banner {
+    background: #e9f2f9;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .banner-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner-text p {
+    font-size: 1.1rem;
+  }
+  
+  /* Key services, cards */
+  .key-services {
+    padding: 2rem;
+  }
+  
+  .services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  .main-footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design (Mobile First) */
+  @media (max-width: 768px) {
+    .nav-menu ul {
+      flex-direction: column;
+    }
+    .services-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

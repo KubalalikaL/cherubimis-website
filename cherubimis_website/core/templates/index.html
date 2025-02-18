@@ -1,0 +1,62 @@
+<!-- django_app/core/templates/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - Cherubimis Solutions {% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section" data-aos="fade-up">
+  <div class="hero-text-container">
+    <h1>Cybersecurity, Governance, Risk, and Compliance</h1>
+    <p>Our Cybersecurity services provide specialist solutions to assess your cybersecurity maturity and develop a sustainable program tailored to your needs.</p>
+    <a href="{% url 'contact' %}" class="btn-primary">Get Started</a>
+  </div>
+</section>
+
+<!-- Key Services -->
+<section class="key-services" data-aos="fade-up">
+  <h2>Key Services Highlights</h2>
+  <p>Our Cybersecurity risk and maturity assessment programs help secure your organization’s future by aligning security initiatives with your business needs and industry best practices.</p>
+  <div class="services-cards">
+    <div class="card" data-aos="flip-left">
+      <h3>Professional Services</h3>
+      <p>Data Protection Officer Services, CISO & Advisory, Contact Center Solutions, Awareness Training, VAPT...</p>
+    </div>
+    <div class="card" data-aos="flip-right">
+      <h3>Tailored Services</h3>
+      <p>Risk & Maturity Assessments, BCP & DR, Compliance, Incident Response,Audit Preparedness Assessments(PCI, SOC Type2, ISO27K) , Governance Framework...</p>
+    </div>
+  </div>
+</section>
+
+<section class="info-section" data-aos="fade-up">
+  <h2>Why Choose Us?</h2>
+  <p>We bring extensive experience across all business sectors, ensuring practical solutions for organizations of all sizes.</p>
+  <ul>
+    <li>Align security initiatives with business needs</li>
+    <li>Manage risks and vulnerabilities effectively</li>
+    <li>Stay ahead of compliance challenges</li>
+  </ul>
+</section>
+
+<section class="partners-section" data-aos="fade-up">
+  <h2>Some of our Customers</h2>
+  <p>We collaborate with a wide range of organizations to deliver comprehensive solutions.</p>
+  <div class="partners-logos">
+    <div class="partner-item" data-aos="zoom-in" data-aos-delay="100">
+      <img src="{% static 'images/novaPay.png' %}" alt="Partner 1" />
+    </div>
+    <div class="partner-item" data-aos="zoom-in" data-aos-delay="200">
+      <img src="{% static 'images/tn.jpg' %}" alt="Partner 2" />
+    </div>
+    <div class="partner-item" data-aos="zoom-in" data-aos-delay="300">
+      <img src="{% static 'images/zodsat.png' %}" alt="Partner 3" />
+    </div>
+    <div class="partner-item" data-aos="zoom-in" data-aos-delay="400">
+      <img src="{% static 'images/Sovereign-Pay-logo.jpg' %}" alt="Partner 4" />
+    </div>
+  </div>
+</section>
+
+{% endblock %}
