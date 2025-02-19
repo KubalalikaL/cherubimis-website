@@ -29,7 +29,7 @@ services:
     networks:
       - cyber_network
     volumes:
-      - cherubimis_website_static:/website/staticfiles
+      - ./staticfiles:/website/staticfiles
 
 
   nginx:
@@ -47,7 +47,7 @@ services:
     volumes:
       - /etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/fullchain.pem:/etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/fullchain.pem;
       - /etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/privkey.pem:/etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/privkey.pem;
-      - cherubimis_website_static:/website/staticfiles:ro
+      - ./staticfiles:/website/staticfiles
 volumes:
   db_data:
   
