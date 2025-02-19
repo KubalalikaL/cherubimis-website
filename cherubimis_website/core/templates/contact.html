@@ -1,12 +1,30 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block title %}Get in Touch - Cherubimis {% endblock %}
+{% block title %}Get in Touch - Cherubimis solutions {% endblock %}
 
 {% block content %}
-<section class="contact-section" data-aos="fade-up">
-  <h1>Get in Touch</h1>
-  <p>Fill out the form below, and we'll get back to you as soon as possible.</p>
-  <div class="contact-form-container">
+
+<section class="contact-hero" data-aos="fade-up">
+  <div class="contact-hero-overlay">
+    <h1>Contact Our Cybersecurity Team</h1>
+    <p>
+      Whether you have a question, need more details, or want to partner with us,
+      we are here to assist. Fill out the form below and we will be in touch soon.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT FORM SECTION -->
+<section class="contact-form-section" data-aos="fade-up" data-aos-delay="100">
+  <div class="contact-intro">
+    <h2>Ready to Secure Your Business?</h2>
+    <p>
+      Our experts are eager to hear about your needs and discuss
+      how our solutions can protect your organization from emerging threats.
+    </p>
+  </div>
+
+  <div class="contact-form-container" data-aos="fade-up">
     <form method="POST" action="">
       {% csrf_token %}
       {{ form|crispy }}
@@ -14,4 +32,58 @@
     </form>
   </div>
 </section>
+
+<section class="contact-locations" data-aos="fade-up" data-aos-delay="200">
+  <h2>Where to Find Us</h2>
+  <p>We support organizations worldwide from our strategically located offices.</p>
+  <div class="locations-list">
+    <div class="location-item" data-aos="fade-right" data-aos-delay="100">
+      <div class="location-icon-container">
+        <i class="fas fa-map-marker-alt location-icon" style="font-size: 36px;"></i>
+      </div>
+      <h3>Head Office (Zimbabwe)</h3>
+      <p>55 Shaneragh Road, Mandara<br/>
+         Harare, Zimbabwe<br/>
+         Phone: +263 (785) 530 416</p>
+      <div class="contact-icons">
+        <a href="tel:+263785530416" title="Call us"><i class="fas fa-phone" style="color: #000;"></i></a>
+        <a href="https://wa.me/+263785530416" title="WhatsApp us"><i class="fab fa-whatsapp" style="color: #000;"></i></a>
+        <a href="https://t.me/+26775560158" title="Telegram us"><i class="fab fa-telegram" style="color: #000;"></i></a>
+        <a href="mailto:info@cherubimis.com" title="Email us"><i class="fas fa-envelope" style="color: #000;"></i></a>
+      </div>
+    </div>
+    <div class="location-item" data-aos="fade-right" data-aos-delay="200">
+      <div class="location-icon-container">
+        <i class="fas fa-map-marker-alt location-icon" style="font-size: 36px;"></i>
+      </div>
+      <h3>Botswana Office</h3>
+      <p>45 Compliance Rd.<br />
+        Gaborone, Botswana<br />
+        Phone: +267 (7) 556 0158</p>
+      <div class="contact-icons">
+        <a href="tel:+26775560158" title="Call us"><i class="fas fa-phone" style="color: #000;"></i></a>
+        <a href="https://wa.me/+26775560158" title="WhatsApp us"><i class="fab fa-whatsapp" style="color: #000;"></i></a>
+        <a href="https://t.me/+26775560158" title="Telegram us"><i class="fab fa-telegram" style="color: #000;"></i></a>
+        <a href="mailto:info@cherubimis.com" title="Email us"><i class="fas fa-envelope" style="color: #000;"></i></a>
+      </div>
+    </div>
+    
+    <div class="location-item" data-aos="fade-right" data-aos-delay="300">
+      <div class="location-icon-container">
+        <i class="fas fa-map-marker-alt location-icon" style="font-size: 36px;"></i>
+      </div>
+      <h3>Canada Office</h3>
+      <p>789 Security Street<br />
+        Toronto, Canada<br />
+        Phone: +1 (647) 923-2449</p>
+      <div class="contact-icons">
+        <a href="tel:+16479232449" title="Call us"><i class="fas fa-phone" style="color: #000;"></i></a>
+        <a href="https://wa.me/+16479232449" title="WhatsApp us"><i class="fab fa-whatsapp" style="color: #000;"></i></a>
+        <a href="https://t.me/+26775560158" title="Telegram us"><i class="fab fa-telegram" style="color: #000;"></i></a>
+        <a href="mailto:info@cherubimis.com" title="Email us"><i class="fas fa-envelope" style="color: #000;"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

@@ -1,6 +1,169 @@
 {% extends 'base.html' %}
-{% block title %}Careers - Cherubimis {% endblock %}
+{% load static %}
+
+{% block title %}Careers - Cherubimis Solutions {% endblock %}
+
 {% block content %}
-<h1>Careers</h1>
-<p>Join our dynamic team and help us shape the future of cybersecurity. Check back often for new opportunities.</p>
+
+<section class="careers-hero" data-aos="fade-up">
+  <div class="careers-hero-overlay">
+    <h1>Join Our Cybersecurity Team</h1>
+    <p>
+      Become part of our dynamic group of solutions specialists,
+      pushing the boundaries of innovation and protecting organizations worldwide.
+    </p>
+    <a href="#open-positions" class="btn-primary">See Open Positions</a>
+  </div>
+</section>
+
+<!-- ABOUT OUR MISSION / CULTURE -->
+<section class="careers-mission" data-aos="fade-up" data-aos-delay="100">
+  <div class="careers-mission-content">
+    <h2>Our Mission &amp; Culture</h2>
+    <p>
+        To provide ICT governance and cybersecurity services & solutions that exceed our customers’ 
+        expectations through honesty, professional dedication and high ethical standards.
+    </p>
+    <p>
+      By joining us, you will be part of a global team united by a passion for 
+      protecting and empowering businesses, wherever they may be.
+    </p>
+  </div>
+  <!-- A placeholder image or brand illustration -->
+  <div class="careers-mission-image" data-aos="zoom-in">
+    <img src="{% static 'images/team.jpg' %}" alt="Team Collaboration" />
+  </div>
+</section>
+
+<section class="careers-why-join" data-aos="fade-up" data-aos-delay="200">
+  <h2>Why Join Us?</h2>
+  <p>
+    We are committed to cultivating a supportive environment where 
+    every team member can thrive. Here is what sets us apart:
+  </p>
+  <div class="why-join-features">
+    <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
+      <i class="fas fa-user-shield fa-2x"></i>
+      <h3>Cutting-Edge Security</h3>
+      <p>
+        Work on sophisticated cyber defense solutions that protect real businesses
+        from evolving threats.
+      </p>
+    </div>
+    <div class="feature-item" data-aos="fade-right" data-aos-delay="200">
+      <i class="fas fa-globe-americas fa-2x"></i>
+      <h3>Global Impact</h3>
+      <p>
+        Our offices and partnerships span multiple continents, letting you collaborate 
+        with clients and colleagues around the world.
+      </p>
+    </div>
+    <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+      <i class="fas fa-lightbulb fa-2x"></i>
+      <h3>Innovative Culture</h3>
+      <p>
+        We foster a creative environment that encourages new ideas, 
+        agile experimentation, and professional growth.
+      </p>
+    </div>
+    <div class="feature-item" data-aos="fade-right" data-aos-delay="400">
+      <i class="fas fa-hands-helping fa-2x"></i>
+      <h3>Collaboration &amp; Mentorship</h3>
+      <p>
+        Learn from seasoned security and solutions experts and help mentor the next generation 
+        of cybersecurity and solutions leaders.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="careers-benefits" data-aos="fade-up" data-aos-delay="300">
+  <h2>Perks &amp; Benefits</h2>
+  <p>We believe in taking care of our people so they can focus on delivering exceptional results.</p>
+  <div class="benefits-list">
+    <div class="benefit-item" data-aos="flip-left" data-aos-delay="100">
+      <i class="fas fa-heartbeat fa-2x"></i>
+      <h3>Comprehensive Health Coverage</h3>
+      <p>We offer competitive medical, dental, and vision plans to keep you and your family healthy.</p>
+    </div>
+    <div class="benefit-item" data-aos="flip-left" data-aos-delay="200">
+      <i class="fas fa-dollar-sign fa-2x"></i>
+      <h3>Competitive Compensation</h3>
+      <p>Enjoy market-leading salaries, bonus programs, and retirement contributions.</p>
+    </div>
+    <div class="benefit-item" data-aos="flip-left" data-aos-delay="300">
+      <i class="fas fa-graduation-cap fa-2x"></i>
+      <h3>Professional Development</h3>
+      <p>Access training programs, certifications, and learning stipends to grow your expertise.</p>
+    </div>
+    <div class="benefit-item" data-aos="flip-left" data-aos-delay="400">
+      <i class="fas fa-laptop-house fa-2x"></i>
+      <h3>Remote &amp; Flexible Work</h3>
+      <p>We embrace modern work arrangements, allowing you to stay productive from anywhere.</p>
+    </div>
+    <div class="benefit-item" data-aos="flip-left" data-aos-delay="500">
+      <i class="fas fa-plane-departure fa-2x"></i>
+      <h3>Paid Time Off</h3>
+      <p>Generous vacation policies and holiday schedules let you recharge and explore.</p>
+    </div>
+    <div class="benefit-item" data-aos="flip-left" data-aos-delay="600">
+      <i class="fas fa-users fa-2x"></i>
+      <h3>Inclusive Culture</h3>
+      <p>Be part of a diverse, inclusive team where every voice matters and can make an impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN POSITIONS SECTION -->
+<section class="careers-open-positions" id="open-positions" data-aos="fade-up" data-aos-delay="400">
+  <h2>Open Positions</h2>
+  <p>
+    We are growing rapidly and looking for talented individuals to fill
+    both technical and non-technical roles. Explore our current opportunities below.
+  </p>
+  <div class="positions-list">
+    <!-- Example Position 1 -->
+    <div class="position-card" data-aos="fade-right" data-aos-delay="100">
+      <h3>Security Engineer</h3>
+      <p class="position-location"><i class="fas fa-map-marker-alt"></i> Zimbabwe / Hybrid</p>
+      <p class="position-desc">
+        Join our growing offensive security team, responsible for vulnerability assessments, 
+        penetration tests, and advanced threat analysis.
+      </p>
+      <a href="#" class="btn-secondary">Apply Now</a>
+    </div>
+    <!-- Example Position 2 -->
+    <div class="position-card" data-aos="fade-right" data-aos-delay="200">
+      <h3>Penetration Tester</h3>
+      <p class="position-location"><i class="fas fa-map-marker-alt"></i> Canada / Remote</p>
+      <p class="position-desc">
+        Perform in-depth security testing on networks, applications, and cloud 
+        environments for global clients.
+      </p>
+      <a href="#" class="btn-secondary">Apply Now</a>
+    </div>
+    <!-- Example Position 3 -->
+    <div class="position-card" data-aos="fade-right" data-aos-delay="300">
+      <h3>Client Engagement Manager</h3>
+      <p class="position-location"><i class="fas fa-map-marker-alt"></i> Botswana / On-Site</p>
+      <p class="position-desc">
+        Oversee cybersecurity projects, liaise with clients, and ensure timely, 
+        high-quality service delivery.
+      </p>
+      <a href="#" class="btn-secondary">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="careers-final-cta" data-aos="fade-up" data-aos-delay="500">
+  <h2>Ready to Build Your Future with Us?</h2>
+  <p>
+    Join a passionate, globally distributed team committed to making a difference 
+    in the world of cybersecurity. We can't wait to see what you'll bring!
+  </p>
+  <a href="{% url 'contact' %}" class="btn-primary">Get in Touch</a>
+</section>
+
 {% endblock %}

@@ -1,21 +1,125 @@
 {% extends 'base.html' %}
-{% block title %}About Us - Cherubimis {% endblock %}
+{% load static %}
+{% block title %}About Us - Cherubimis Solutions {% endblock %}
+
 {% block content %}
-<section class="about-section">
-  <h1>About Us</h1>
-  <ul>
-    <li><strong>Company Mission:</strong> To provide top-tier cybersecurity solutions.</li>
-    <li><strong>Expertise and Experience:</strong> Skilled professionals with diverse industry knowledge.</li>
-    <li><strong>Our Values:</strong> Integrity, confidentiality, innovation, and client empowerment.</li>
-  </ul>
+<section class="about-hero" data-aos="fade-up">
+  <div class="about-hero-content">
+    <h1>About Our Cybersecurity Company</h1>
+    <p>
+      We are dedicated to helping organizations of all sizes safeguard their data, reduce risk, 
+      and navigate the ever-evolving threat landscape.
+    </p>
+    <a href="{% url 'contact' %}" class="btn-primary">Get in Touch</a>
+  </div>
 </section>
 
-<section class="company-profile">
-  <h2>Company Profile</h2>
-  <p>Background: Business consultancy and professional services provider, focusing on cybersecurity solutions and ICT governance & compliance since 2021.</p>
-  <p>Office Locations: Head Office in Zimbabwe, affiliate offices in Botswana and Canada.</p>
-  <p>Partners: African Business Solutions Provider (Zimbabwe), Intarel Consultancy (Botswana & Zimbabwe), Tusson Solutions (Canada).</p>
-  <p>Specialist services: VAPT, Contact Centre Solutions, Data Protection Officer Consultancy, Security Assessments.</p>
-  <p>Profile of our Customers: A cross-section of diverse organizations, all with ICT at the heart of their business.</p>
+<section class="about-story" data-aos="fade-up" data-aos-duration="1200">
+  <div class="about-story-text">
+    <h2>Our Story</h2>
+    <p>
+      Since our establishment in 2021, we have been at the forefront of cybersecurity solutions and 
+      ICT governance, offering clients across diverse sectors tailored programs to meet their 
+      unique security and compliance needs. With offices in Zimbabwe, Botswana, and Canada, and 
+      strategic partnerships worldwide, we bring a global perspective to every engagement.
+    </p>
+    <p>
+      From vulnerability assessments and penetration testing to data protection officer services,
+      our team brings real-world experience and industry best practices to help you stay ahead 
+      of emerging threats.
+    </p>
+  </div>
+  <!-- Timeline / Milestones example -->
+  <div class="about-timeline">
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+      <span class="timeline-year">2021</span>
+      <p>Founded as a business consultancy and professional services provider focusing on cyber solutions & compliance.</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+      <span class="timeline-year">2022</span>
+      <p>Expanded global footprint with affiliate offices in Botswana and Canada, enhancing our international reach.</p>
+    </div>
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="600">
+      <span class="timeline-year">2023</span>
+      <p>Launched specialized services: Contact Centre Solutions, VAPT, and Governance Framework development.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-mission-values" data-aos="fade-up" data-aos-duration="1000">
+  <div class="mission-values-content">
+    <h2>Our Mission &amp; Values</h2>
+    <p>
+      To provide ICT governance and cybersecurity services & solutions that exceed our
+      customers’ expectations through honesty, professional dedication and high ethical
+      standards. We believe in:
+    </p>
+    <ul>
+      <li><strong>Integrity:</strong> Upholding the highest ethical standards in every interaction.</li>
+      <li><strong>Collaboration:</strong> Working alongside clients and partners to address threats holistically.</li>
+      <li><strong>Innovation:</strong> Constantly evolving our strategies to outpace emerging cyber threats.</li>
+      <li><strong>Excellence:</strong> Striving for unparalleled quality and measurable results.</li>
+    </ul>
+  </div>
+  <div class="mission-values-image" data-aos="zoom-in" data-aos-delay="200">
+    <!-- Replace with relevant brand imagery or illustration -->
+    <img src="{% static 'images/mission.jpg' %}" alt="Our Mission and Values" />
+  </div>
+</section>
+
+<section class="about-global-impact" data-aos="fade-up">
+  <h2>Global Impact</h2>
+  <p>
+    Our strategic partnerships with African Business Solutions Provider (Zimbabwe), 
+    Intarel Consultancy (Botswana &amp; Zimbabwe), and Tusson Solutions (Canada) ensure 
+    we can deliver localized support while maintaining global standards.
+  </p>
+  <div class="global-impact-stats">
+    <div class="impact-stat" data-aos="flip-left" data-aos-delay="100">
+      <span class="stat-number">3+</span>
+      <span class="stat-label">Offices Worldwide</span>
+    </div>
+    <div class="impact-stat" data-aos="flip-left" data-aos-delay="300">
+      <span class="stat-number">50+</span>
+      <span class="stat-label">Clients Served</span>
+    </div>
+    <div class="impact-stat" data-aos="flip-left" data-aos-delay="500">
+      <span class="stat-number">4+</span>
+      <span class="stat-label">Strategic Partnerships</span>
+    </div>
+  </div>
+</section>
+
+<section class="about-team" data-aos="fade-up" data-aos-duration="1000">
+  <h2>Meet Our Team</h2>
+  <p>
+    Our strength comes from passionate security professionals, data privacy experts, and technology 
+    specialists committed to delivering world-class cybersecurity solutions.
+  </p>
+  <div class="team-members">
+    <div class="team-member" data-aos="zoom-in" data-aos-delay="100">
+      <img src="{% static 'images/man1.png' %}" alt="Team Member 1" />
+      <h3>John Doe</h3>
+      <span class="team-role">Chief Information Security Officer</span>
+    </div>
+    <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
+      <img src="{% static 'images/woman.png' %}" alt="Team Member 2" />
+      <h3>Jane Smith</h3>
+      <span class="team-role">Head of Compliance</span>
+    </div>
+    <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
+      <img src="{% static 'images/man2.png' %}" alt="Team Member 3" />
+      <h3>Mark Brown</h3>
+      <span class="team-role">Senior VAPT Consultant</span>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta" data-aos="fade-up">
+  <h2>Ready to Transform Your Cybersecurity Posture?</h2>
+  <p>
+    Connect with us today to explore how we can tailor solutions that meet your security and compliance needs.
+  </p>
+  <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
 </section>
 {% endblock %}

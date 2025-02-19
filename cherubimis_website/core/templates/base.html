@@ -11,6 +11,7 @@
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   {% block extra_head %}{% endblock %}
 </head>
@@ -47,13 +48,7 @@
 
   <!-- JS: AOS, Custom Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,    // Animation duration
-      easing: 'ease-in',// Easing function
-      once: true,       // Whether animation should happen only once
-    });
-  </script>
+  <script>AOS.init({duration: 800, easing: 'ease-in', once: true});</script>
   <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

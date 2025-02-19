@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import InquiryForm
+import logging
 
 class HomeView(TemplateView):
     template_name = "index.html"
@@ -37,13 +38,15 @@ def ContactView(request):
                 f"Company: {inquiry_obj.company_name}\n\n"
                 f"Message:\n{inquiry_obj.inquiry}"
             )
-            send_mail(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.ADMIN_EMAIL],
-                fail_silently=False,
-            )
+            # send_mail(
+            #     subject,
+            #     message,
+            #     settings.DEFAULT_FROM_EMAIL,
+            #     [settings.ADMIN_EMAIL],
+            #     fail_silently=False,
+            # )
+            logging.info(f"Email: {subject}\n{message}")
+            print(f"Subject: {subject}\n{message}")
             return redirect('contact_success')
     else:
         form = InquiryForm()
