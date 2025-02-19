@@ -41,9 +41,12 @@ services:
       - web
     networks:
       - cyber_network
-
+    volumes:
+      - /etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/fullchain.pem:/etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/fullchain.pem;
+      - /etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/privkey.pem:/etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/privkey.pem;
 volumes:
   db_data:
+  
 
 networks:
   cyber_network:
