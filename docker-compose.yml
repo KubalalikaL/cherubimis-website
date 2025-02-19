@@ -28,6 +28,8 @@ services:
       - db
     networks:
       - cyber_network
+    volumes:
+      - cherubimis_website_static:/website/staticfiles
 
 
   nginx:
