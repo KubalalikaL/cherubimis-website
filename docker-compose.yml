@@ -37,6 +37,7 @@ services:
     container_name: cherubimis_nginx
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - web
     networks:
@@ -44,6 +45,7 @@ services:
     volumes:
       - /etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/fullchain.pem:/etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/fullchain.pem;
       - /etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/privkey.pem:/etc/letsencrypt/live/cherubimis.stagging.whitehillscare.co.uk/privkey.pem;
+      - cherubimis_website_static:/website/staticfiles:ro
 volumes:
   db_data:
   
