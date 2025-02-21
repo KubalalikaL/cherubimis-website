@@ -1,114 +1,180 @@
-<!-- django_app/core/templates/index.html -->
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Home - Cherubimis Solutions {% endblock %}
 
 {% block content %}
 
-<!-- Hero Section -->
 <section class="hero-section" data-aos="fade-up">
   <div class="hero-text-container">
     <h1>Cybersecurity, Governance, Risk, and Compliance</h1>
-    <p>Our Cybersecurity services provide specialist solutions to assess your cybersecurity maturity and develop a sustainable program tailored to your needs.</p>
+    <p>
+      Our Cybersecurity services provide specialist solutions to assess your
+      cybersecurity maturity and develop a sustainable program tailored to your needs.
+    </p>
     <a href="{% url 'contact' %}" class="btn-primary">Get Started</a>
   </div>
 </section>
 
-<!-- Key Services -->
-<section class="key-services" data-aos="fade-up">
-  <h2>Key Services Highlights</h2>
-  <p>Our Cybersecurity risk and maturity assessment programs help secure your organization’s future by aligning security initiatives with your business needs and industry best practices.</p>
-  <div class="services-cards">
-    <div class="card" data-aos="flip-left">
-      <h3>Professional Services</h3>
-      <p>Data Protection Officer Services, CISO & Advisory, Contact Center Solutions, Awareness Training, VAPT...</p>
-    </div>
-    <div class="card" data-aos="flip-right">
-      <h3>Tailored Services</h3>
-      <p>Risk & Maturity Assessments, BCP & DR, Compliance, Incident Response,Audit Preparedness Assessments(PCI, SOC Type2, ISO27K) , Governance Framework...</p>
-    </div>
-  </div>
-</section>
-
-<section class="info-section" data-aos="fade-up">
-  <h2>Why Choose Us?</h2>
-  <p>We bring extensive experience across all business sectors, ensuring practical solutions for organizations of all sizes.</p>
-  <ul>
-    <li>Align security initiatives with business needs</li>
-    <li>Manage risks and vulnerabilities effectively</li>
-    <li>Stay ahead of compliance challenges</li>
-  </ul>
-
-  <div class="info-features">
-
-    <!-- Feature 1 -->
-    <div class="info-feature" data-aos="fade-right">
-      <div class="info-feature-icon">
-        <img src="{% static 'images/full-stack-developer-icon.svg' %}" alt="Holistic Coverage Icon" />
-      </div>
-      <div class="info-feature-content">
-        <h3>Holistic Coverage</h3>
-        <p>
-          We bring together security, IT, and compliance teams to deliver end-to-end coverage of your entire environment, 
-          ensuring no gaps in your defensive posture.
-        </p>
-      </div>
-    </div>
-
-    <!-- Feature 2 -->
-    <div class="info-feature" data-aos="fade-left">
-      <div class="info-feature-icon">
-        <img src="{% static 'images/interesting-facts-icon.svg' %}" alt="Actionable Insights Icon" />
-      </div>
-      <div class="info-feature-content">
-        <h3>Actionable Insights</h3>
-        <p>
-          Using advanced data analytics and risk assessment methods, we uncover hidden vulnerabilities 
-          and present clear, prioritized steps for remediation.
-        </p>
-      </div>
-    </div>
-
-    <!-- Feature 3 -->
-    <div class="info-feature" data-aos="fade-right">
-      <div class="info-feature-icon">
-        <img src="{% static 'images/flexibility-scalability-icon.svg' %}" alt="Scalable Approach Icon" />
-      </div>
-      <div class="info-feature-content">
-        <h3>Scalable &amp; Adaptable</h3>
-        <p>
-          Whether you're a small startup or a global enterprise, our solutions scale to fit your unique needs, 
-          evolving alongside your business growth and threat landscape.
-        </p>
-      </div>
-    </div>
-
-    <!-- Feature 4 -->
-    <div class="info-feature" data-aos="fade-left">
-      <div class="info-feature-icon">
-        <img src="{% static 'images/user-network-icon.svg' %}" alt="Expertise Icon" />
-      </div>
-      <div class="info-feature-content">
-        <h3>Deep Industry Expertise</h3>
-        <p>
-          Our professionals have years of hands-on experience across multiple sectors, ensuring each recommendation 
-          is backed by domain-specific knowledge.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA or Additional Content -->
-  <div class="info-cta" data-aos="fade-up">
-    <h3>Join Forces with a Trusted Cybersecurity Partner</h3>
+<section class="company-highlights" data-aos="fade-up">
+  <div class="highlights-container">
+    <h2>Key Services Highlights</h2>
     <p>
-      Partner with us to build a robust, future-proof security posture. Stay compliant with ever-evolving 
-      regulations, mitigate risks early, and protect your most valuable digital assets.
+      Our Cybersecurity risk and maturity assessment programs help secure your organization’s future by
+      aligning security initiatives with your business needs and industry best practices.
     </p>
-    <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+    <div class="highlight-item" data-aos="fade-right" data-aos-delay="100">
+      <h2>Professional Services</h2>
+      <p>
+        Data Protection Officer Services, CISO &amp; Advisory,
+        Contact Center Solutions, Awareness Training, VAPT...
+      </p>
+    </div>
+    <div class="highlight-item" data-aos="fade-right" data-aos-delay="100">
+      <h2>Unmatched Expertise</h2>
+      <p>
+        Our team draws on deep cybersecurity knowledge and hands-on experience,
+        safeguarding global enterprises and startups alike. We combine strategic
+        foresight with proven methodologies for holistic protection.
+      </p>
+    </div>
+    <div class="highlight-item" data-aos="fade-right" data-aos-delay="100">
+      <h2>Tailored Services</h2>
+      <p>
+        Risk &amp; Maturity Assessments, BCP &amp; DR, Compliance,
+        Incident Response, Audit Preparedness (PCI, SOC Type2, ISO27K),
+        Governance Framework...
+      </p>
+    </div>
+    <div class="highlight-item" data-aos="fade-left" data-aos-delay="200">
+      <h2 style="text-align: center;">Tailored Solutions</h2>
+      <p>
+        Security is not one-size-fits-all. We assess your specific environment and
+        compliance needs, delivering solutions that adapt and scale as you grow.
+      </p>
+    </div>
   </div>
 </section>
 
+
+<section class="extended-offerings" data-aos="fade-up">
+  <div class="offerings-header">
+    <h2>Explore Our Comprehensive Solutions</h2>
+    <p>
+      From vulnerability management to hands-on incident response, we provide proactive and
+      reactive measures for an ever-changing threat landscape.
+    </p>
+  </div>
+  <div class="offerings-grid">
+    <div class="offering-card" data-aos="zoom-in" data-aos-delay="100">
+      <h3>Endpoint &amp; Network Security</h3>
+      <p>
+        Shield your infrastructure with advanced threat detection and
+        robust network segmentation strategies.
+      </p>
+    </div>
+    <div class="offering-card" data-aos="zoom-in" data-aos-delay="200">
+      <h3>Cloud Security &amp; Compliance</h3>
+      <p>
+        Safeguard hybrid and multi-cloud environments, ensuring data integrity
+        and compliance with industry regulations.
+      </p>
+    </div>
+    <div class="offering-card" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Threat Intelligence &amp; Monitoring</h3>
+      <p>
+        Stay ahead of malicious actors with real-time alerts, actionable intelligence,
+        and 24/7 monitoring.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="core-services" data-aos="fade-up">
+  <h2>Our Core Services</h2>
+  <p>
+    We provide specialized solutions across the entire cyber defense lifecycle,
+    ensuring you stay ahead of threats and maintain resilience in a rapidly
+    evolving digital landscape.
+  </p>
+
+  <div class="services-features">
+    <div class="service-feature" data-aos="fade-right">
+
+      <div class="service-feature-content">
+        <h3>Incident Response</h3>
+        <p>
+          Our industry-certified incident handlers respond swiftly and effectively,
+          restoring operations and recovering data while minimizing damage.
+        </p>
+        <a href="#" class="btn-learn-more">Explore Incident Response</a>
+      </div>
+    </div>
+
+    <div class="service-feature" data-aos="fade-left">
+
+      <div class="service-feature-content">
+        <h3>Cloud Security</h3>
+        <p>
+          Our certified specialists secure AWS, Azure, and hybrid clouds,
+          empowering rapid deployment without compromising compliance or performance.
+        </p>
+        <a href="#" class="btn-learn-more">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="service-feature" data-aos="fade-right">
+
+      <div class="service-feature-content">
+        <h3>Governance, Risk &amp; Compliance (GRC)</h3>
+        <p>
+          We help you meet privacy regulations and align with recognized
+          security standards (e.g. SOC 2, ISO 27001), reducing risk and
+          ensuring regulatory confidence.
+        </p>
+        <a href="#" class="btn-learn-more">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="service-feature" data-aos="fade-left">
+
+      <div class="service-feature-content">
+        <h3>Security Awareness &amp; Human Risk</h3>
+        <p>
+          We develop human firewalls, empowering employees to become Security Champions
+          and the first line of defense against social engineering attacks.
+        </p>
+        <a href="#" class="btn-learn-more">Explore Awareness</a>
+      </div>
+    </div>
+
+    <div class="service-feature" data-aos="fade-right">
+
+      <div class="service-feature-content">
+        <h3>Security Testing</h3>
+        <p>
+          Our expert Red Team provides tangible proof of vulnerabilities
+          in your applications and infrastructure, guiding you toward remediation.
+        </p>
+        <a href="#" class="btn-learn-more">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA or Additional Content (Optional) -->
+<section class="services-cta" data-aos="fade-up">
+  <h3>Ready to Elevate Your Security Posture?</h3>
+  <p>
+    Let us be your trusted ally in defending against cyber threats.
+    Our team stands ready to customize solutions that safeguard your
+    organisation’s future.
+  </p>
+  <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+
+</section>
+
+
+<!-- Partners Section (existing content) -->
 <section class="partners-section" data-aos="fade-up">
   <h2>Some of our Customers</h2>
   <p>We collaborate with a wide range of organizations to deliver comprehensive solutions.</p>
