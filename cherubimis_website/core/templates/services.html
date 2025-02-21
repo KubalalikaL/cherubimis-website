@@ -3,133 +3,145 @@
 {% block title %}Services - Cybersecurity{% endblock %}
 
 {% block content %}
-<!-- Hero / Banner Section (similar look & feel) -->
 <section class="services-hero" data-aos="fade-up">
-  <div class="services-hero-content">
+  <div class="hero-text-container">
     <h1>Our Services</h1>
+    <p>Empower your organization with cutting-edge cybersecurity solutions, designed to safeguard your data and propel your business forward.</p>
+  </div>
+</section>
+
+<!-- INTRO / OVERVIEW SECTION -->
+<section class="services-intro" data-aos="fade-up">
+  <div class="intro-text">
+    <h2>Security That Scales</h2>
+    <p>Our team of experts delivers a wide range of professional and tailored services to meet evolving cybersecurity
+      threats. From vulnerability assessments to data protection consultancy, we offer solutions that adapt to your
+      unique challenges.</p>
+  </div>
+</section>
+
+<!-- SERVICES GRID SECTION -->
+<section class="services-grid">
+  <!-- Card 1 -->
+  <div class="service-card" data-aos="flip-left">
+    <div class="card-icon">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <h3>Vulnerability Assessment &amp; Penetration Testing</h3>
     <p>
-      We offer a comprehensive suite of cybersecurity solutions,
-      leveraging years of expertise to protect your data, strengthen
-      your defenses, and help you stay compliant.
+      Identify weaknesses across networks, applications, and systems. Our proactive testing ensures you stay a step
+      ahead of potential attackers.
     </p>
-  </div>
-</section>
-
-<!-- Services Overview Section -->
-<section class="services-overview" data-aos="fade-up">
-  <h2>Explore Our Key Services</h2>
-  <p>
-    From Vulnerability Assessments to Business Continuity, our services are designed
-    to keep your organization secure and resilient.
-  </p>
-</section>
-
-<!-- Services Cards Section -->
-<section class="services-cards-container">
-  <div class="service-card" data-aos="flip-left">
-    <div class="service-card-image">
-      <img src="{% static 'images/vapt.svg' %}" alt="VAPT Icon" />
-    </div>
-    <div class="service-card-content">
-      <h3>Vulnerability Assessment &amp; Penetration Testing</h3>
-      <p>
-        Identify, classify, and address security flaws across your networks,
-        applications, and systems. Our VAPT process helps you proactively reduce risk
-        and safeguard critical data.
-      </p>
-      <a href="#learn-more-vapt" class="btn-secondary">Learn More</a>
+    <div>
+      <a href="#" class="btn-learn-more">Learn More</a>
     </div>
   </div>
 
-  <!-- Example card 2 -->
-  <div class="service-card" data-aos="flip-right">
-    <div class="service-card-image">
-      <img src="{% static 'images/service-desk-icon.svg' %}" alt="Contact Center Icon" />
+  <!-- Card 2 -->
+  <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+    <div class="card-icon">
+      <i class="fas fa-headset"></i>
     </div>
-    <div class="service-card-content">
-      <h3>Contact Centre Solutions &amp; Support</h3>
-      <p>
-        Deploy robust, customer-focused contact centers. We provide design,
-        installation, training, and ongoing support to optimize customer
-        interactions and ensure seamless workflows.
-      </p>
-      <a href="#learn-more-contact-center" class="btn-secondary">Learn More</a>
+    <h3>Virtual CISO (vCISO) and advisory Services</h3>
+    <p>
+      Enhance your cybersecurity strategy with our Virtual CISO services, providing strategic 
+      guidance and oversight on all aspects of information security. We offer expert advice and 
+      consulting services to improve your cybersecurity posture through our experienced Chief 
+      information security Officers (CISOs)  collaborate closely with your Team.Scale the level 
+      of support you require based on current needs and evolving threats, resulting in effective 
+      cost saving for your organisation. (flexibility)
+    </p>
+    <div style="text-align: left;">
+      <ul>
+    <li>Security awareness training</li>
+    <li>Tailored strateg </li>        
+    <li>Policy development and implementation</li>         
+    <li>No full-time commitment</li>    
+  </ul>
+  </div>
+    <div>
+      <a href="#" class="btn-learn-more">Learn More</a>
     </div>
   </div>
 
-  <!-- Example card 3 -->
-  <div class="service-card" data-aos="flip-left">
-    <div class="service-card-image">
-      <img src="{% static 'images/privacy-icon.svg' %}" alt="DPO Icon" />
+  <!-- Card 3 -->
+  <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+    <div class="card-icon">
+      <i class="fas fa-user-shield"></i>
     </div>
-    <div class="service-card-content">
-      <h3>Data Protection Officer Consultancy Services</h3>
-      <p>
-        Ensure compliance with evolving data protection regulations at a fraction of the
-        cost of hiring a full-time DPO. Our experts guide you in building and maintaining
-        a robust data governance framework.
-      </p>
-      <a href="#learn-more-dpo" class="btn-secondary">Learn More</a>
+    <h3>Data Protection Officer Consultancy</h3>
+    <p>
+      Comply with evolving regulations at a fraction of hiring a full-time DPO. From gap analyses to policy design, our
+      experts keep your data safe.We collaborate closely with you to implement and maintain robust privacy frameworks that 
+      comply with a range of regulatory frameworks, including Data Protection Act (Zimbabwe and Botswana ), PIPEDA (Canada), 
+      HIPAA (USA) and GDPR (EU).
+    </p>
+    <div style="text-align: left;">
+        <ul>
+      <li>Expert Privacy Guidance</li>
+      <li>Training and awareness </li>        
+      <li>Data Breaches Responses</li>         
+      <li>No full-time commitment</li>    
+    </ul>
     </div>
-  </div>
-
-  <!-- Example card 4 -->
-  <div class="service-card" data-aos="flip-right">
-    <div class="service-card-image">
-      <img src="{% static 'images/privacy-document-icon.svg' %}" alt="Audit Icon" />
-    </div>
-    <div class="service-card-content">
-      <h3>Information Security Audit Readiness Assessment</h3>
-      <p>
-        Get prepared for compliance audits with our in-depth readiness assessment.
-        We help you identify gaps, streamline documentation, and adopt best
-        practices for a successful audit.
-      </p>
-      <a href="#learn-more-audit" class="btn-secondary">Learn More</a>
+  
+    <div>
+      <a href="#" class="btn-learn-more">Learn More</a>
     </div>
   </div>
 
-  <!-- Example card 5 -->
-  <div class="service-card" data-aos="flip-left">
-    <div class="service-card-image">
-      <img src="{% static 'images/data-protection-icon.svg' %}" alt="Policy Icon" />
+  <!-- Card 4 -->
+  <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+    <div class="card-icon">
+      <i class="fas fa-search"></i>
     </div>
-    <div class="service-card-content">
-      <h3>Policy Management &amp; Documentation</h3>
-      <p>
-        Develop, maintain, and communicate clear, compliant policies.
-        We help you structure documentation that supports organizational
-        governance, transparency, and accountability.
-      </p>
-      <a href="#learn-more-policy" class="btn-secondary">Learn More</a>
+    <h3>Audit Readiness Assessments</h3>
+    <p>
+      Prepare for compliance audits with in-depth readiness checks and best-practice frameworks. Minimize surprises and
+      streamline certifications.
+    </p>
+    <div>
+      <a href="#" class="btn-learn-more">Learn More</a>
     </div>
   </div>
 
-  <!-- Example card 6 -->
-  <div class="service-card" data-aos="flip-right">
-    <div class="service-card-image">
-      <img src="{% static 'images/cloud-services-icon.svg' %}" alt="BCP Icon" />
+  <!-- Card 5 -->
+  <div class="service-card" data-aos="flip-left" data-aos-delay="400">
+    <div class="card-icon">
+      <i class="fas fa-file-signature"></i>
     </div>
-    <div class="service-card-content">
-      <h3>Business Continuity &amp; Disaster Recovery</h3>
-      <p>
-        Develop strategic plans to minimize downtime and maintain
-        operations after unforeseen incidents. Our experts guide you
-        through risk assessment, DR testing, and more.
-      </p>
-      <a href="#learn-more-bcdr" class="btn-secondary">Learn More</a>
+    <h3>Policy Management &amp; Documentation</h3>
+    <p>
+      Develop, maintain, and communicate clear, compliant policies. Our structured approach promotes governance,
+      transparency, and accountability.
+    </p>
+    <div>
+      <a href="#" class="btn-learn-more">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="service-card" data-aos="flip-left" data-aos-delay="500">
+    <div class="card-icon">
+      <i class="fas fa-sync-alt"></i>
+    </div>
+    <h3>Business and Cyber Resilience & Incident Response</h3>
+    <p>
+      Enhance proactive Cyber and Business strategies to mitigate threats before they occur. 
+      Develop strategic plans to minimize downtime and maintain operations after unforeseen incidents. 
+      Our experts guide you through risk assessment, DR testing, and more.
+    </p>
+    <div>
+      <a href="#" class="btn-learn-more">Learn More</a>
     </div>
   </div>
 </section>
 
-<!-- Animated CTA or Additional Content -->
+<!-- CALL TO ACTION SECTION -->
 <section class="services-cta" data-aos="fade-up">
-  <h2>Ready to Secure Your Future?</h2>
-  <p>
-    Let us be your trusted partner in strengthening your cybersecurity posture.
-    Contact us today to discuss tailored solutions for your unique needs.
-  </p>
-  <a href="{% url 'contact' %}" class="btn-primary">Get in Touch</a>
+  <h2>Ready to Strengthen Your Security Posture?</h2>
+  <p>Get in touch with our experts today to discuss how our tailored services can help protect your organization.</p>
+  <a href="/contact/" class="btn-primary">Contact Us</a>
 </section>
 
 {% endblock %}

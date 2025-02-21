@@ -1,6 +1,157 @@
 {% extends 'base.html' %}
-{% block title %}Solutions - Cherubimis{% endblock %}
+{% load static %}
+{% block title %}Solutions - Help Desk & Support{% endblock %}
+
 {% block content %}
-<h1>Solutions</h1>
-<p>Our solutions leverage modern technology and industry best practices to safeguard your organization's data and operations.</p>
+
+<!-- HERO SECTION -->
+<section class="solutions-hero" data-aos="fade-up">
+  <div class="solutions-hero-content">
+    <h1>Help Desk Solutions &amp; Support</h1>
+    <p>
+      From deploying robust, customer focused contact centers to providing design, 
+      installation, training, and ongoing support with the goal of optimising customer 
+      interactions and ensuring seamless workflows.
+    </p>
+    <a href="{% url 'contact' %}" class="btn-primary">Get Started</a>
+  </div>
+</section>
+
+<!-- OVERVIEW SECTION -->
+<section class="solutions-overview" data-aos="fade-up">
+  <div class="overview-header">
+    <h2>Empowering Your Customer Experience</h2>
+    <p>
+      A well structured help desk is more than just a phone line. It is 
+      the frontline of your business, where customers form lasting 
+      impressions. Our solutions ensure every interaction is 
+      consistent, empathetic, and efficient.
+    </p>
+  </div>
+  <div class="overview-grid">
+    <div class="overview-card" data-aos="fade-right">
+      <h3>Seamless Integration</h3>
+      <p>
+        We connect your existing CRM, ticketing, and communication 
+        platforms, minimizing disruption and boosting productivity 
+        from day one.
+      </p>
+    </div>
+    <div class="overview-card" data-aos="fade-left">
+      <h3>24/7 Availability</h3>
+      <p>
+        Offer round-the-clock assistance and maintain business 
+        continuity with minimal overhead. Scale up or down to meet 
+        surges in demand.
+      </p>
+    </div>
+    <div class="overview-card" data-aos="fade-right">
+      <h3>Expert Training</h3>
+      <p>
+        Equip your support team with proven techniques and 
+        best practices, fostering consistent communication and 
+        high customer satisfaction.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FEATURES SECTION -->
+<section class="key-features" data-aos="fade-up">
+  <h2>Key Benefits of Our Help Desk Solutions</h2>
+  <div class="features-container">
+
+    <div class="feature-item" data-aos="flip-left">
+      <h3>Customisation &amp; Scalability</h3>
+      <p>
+        Tailor made designs that fit your business model. As you grow, 
+        our solutions grow with you, ensuring no continual growth with no disruption.
+      </p>
+    </div>
+
+    <div class="feature-item" data-aos="flip-left" data-aos-delay="100">
+      <h3>Advanced Analytics</h3>
+      <p>
+        Leverage dashboards and real time metrics to optimise 
+        call resolution times, prioritize critical issues, 
+        and forecast staff requirements.
+      </p>
+    </div>
+
+    <div class="feature-item" data-aos="flip-left" data-aos-delay="200">
+      <h3>Omni-Channel Support</h3>
+      <p>
+        Meet your customers where they are: phone, email, chat, or 
+        social media, while keeping all interactions in a centralised 
+        dashboard.
+      </p>
+    </div>
+
+    <div class="feature-item" data-aos="flip-left" data-aos-delay="300">
+      <h3>Secure, Compliant Environments</h3>
+      <p>
+        Adhere to rigorous data protection and privacy standards. 
+        Our solutions ensure robust encryption, secure data flows, 
+        and adherence to relevant regulations.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXAMPLE WORKFLOW / STEPS SECTION -->
+<section class="solutions-steps" data-aos="fade-up">
+  <h2>Our Approach</h2>
+  <div class="steps-grid">
+    <!-- Step 1 -->
+    <div class="step-card" data-aos="fade-right">
+      <span class="step-number">1</span>
+      <h3>Consultation &amp; Assessment</h3>
+      <p>
+        We evaluate your current support infrastructure, identify 
+        gaps, and align solutions with your business goals.
+      </p>
+    </div>
+    <!-- Step 2 -->
+    <div class="step-card" data-aos="fade-left">
+      <span class="step-number">2</span>
+      <h3>Implementation &amp; Integration</h3>
+      <p>
+        Our team configures and seamlessly integrates platforms, 
+        ensuring minimal disruption to ongoing operations.
+      </p>
+    </div>
+    <!-- Step 3 -->
+    <div class="step-card" data-aos="fade-right">
+      <span class="step-number">3</span>
+      <h3>Training &amp; Go-Live</h3>
+      <p>
+        Empower your staff with targeted training. 
+        Once ready, we will oversee a smooth launch of your new help desk.
+      </p>
+    </div>
+    <!-- Step 4 -->
+    <div class="step-card" data-aos="fade-left">
+      <span class="step-number">4</span>
+      <h3>Ongoing Support &amp; Optimisation</h3>
+      <p>
+        We remain actively engaged, providing updates, 
+        performance reviews, and continuous improvements to meet 
+        evolving challenges.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION SECTION -->
+<section class="solutions-cta" data-aos="fade-up">
+  <h2>Ready to Redefine Your Customer Experience?</h2>
+  <p>
+    Let us help you build the best Help Desk that 
+    delights customers and streamlines operations. 
+    Get in touch to explore a tailored solution for your organisation.
+  </p>
+  <a href="{% url 'contact' %}" class="btn-primary">Contact Us Today</a>
+</section>
+
 {% endblock %}
+
