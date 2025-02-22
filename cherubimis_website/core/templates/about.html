@@ -4,7 +4,7 @@
 
 {% block content %}
 <section class="about-hero" data-aos="fade-up">
-  <div class="about-hero-content">
+  <div class="hero-text-container">
     <h1>About Our Cybersecurity Company</h1>
     <p>
       We are dedicated to helping organizations of all sizes safeguard their data, reduce risk, 
@@ -29,7 +29,6 @@
       of emerging threats.
     </p>
   </div>
-  <!-- Timeline / Milestones example -->
   <div class="about-timeline">
     <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
       <span class="timeline-year">2021</span>
@@ -62,7 +61,6 @@
     </ul>
   </div>
   <div class="mission-values-image" data-aos="zoom-in" data-aos-delay="200">
-    <!-- Replace with relevant brand imagery or illustration -->
     <img src="{% static 'images/mission.jpg' %}" alt="Our Mission and Values" />
   </div>
 </section>
@@ -120,6 +118,6 @@
   <p>
     Connect with us today to explore how we can tailor solutions that meet your security and compliance needs.
   </p>
-  <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+  <a href="{% url 'contact' %}" class="cta-button">Contact Us</a>
 </section>
 {% endblock %}

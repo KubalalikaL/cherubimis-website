@@ -5,8 +5,8 @@
 {% block content %}
 
 <section class="contact-hero" data-aos="fade-up">
-  <div class="contact-hero-overlay">
-    <h1>Contact Our Cybersecurity Team</h1>
+  <div class="hero-text-container">
+    <h1>Contact Our Team</h1>
     <p>
       Whether you have a question, need more details, or want to partner with us,
       we are here to assist. Fill out the form below and we will be in touch soon.
@@ -28,7 +28,7 @@
     <form method="POST" action="">
       {% csrf_token %}
       {{ form|crispy }}
-      <button type="submit" class="btn-primary">Submit</button>
+      <button type="submit" class="btn-submit">Submit</button>
     </form>
   </div>
 </section>
@@ -73,8 +73,8 @@
         <i class="fas fa-map-marker-alt location-icon" style="font-size: 36px;"></i>
       </div>
       <h3>Canada Office</h3>
-      <p>10725 Louis St. Laurent Avenue Milton<br />
-        Ontario, Canada<br />
+      <p>10725 Louis St. Laurent Avenue<br />
+        Milton On, Canada<br />
         Phone: +1 (647) 923-2449</p>
       <div class="contact-icons">
         <a href="tel:+16479232449" title="Call us"><i class="fas fa-phone" style="color: #000;"></i></a>
