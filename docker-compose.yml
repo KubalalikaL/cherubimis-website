@@ -11,7 +11,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - "3307:3306"  # Optional: external port mapping for local dev
+      - "3307:3306" 
     volumes:
       - db_data:/var/lib/mysql
       - ./db-primary/init-primary.sh:/docker-entrypoint-initdb.d/init-primary.sh:ro
