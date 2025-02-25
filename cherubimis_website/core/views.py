@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import InquiryForm
-import logging
+from django.core.mail import EmailMessage
 
 class HomeView(TemplateView):
     template_name = "index.html"
@@ -30,7 +30,8 @@ def ContactView(request):
         form = InquiryForm(request.POST)
         if form.is_valid():
             inquiry_obj = form.save()
-            # Email admin
+
+            # Build the email subject and body
             subject = "New Inquiry Received"
             message = (
                 f"New inquiry from {inquiry_obj.first_name} {inquiry_obj.last_name}\n"
@@ -38,16 +39,28 @@ def ContactView(request):
                 f"Company: {inquiry_obj.company_name}\n\n"
                 f"Message:\n{inquiry_obj.inquiry}"
             )
-            # send_mail(
-            #     subject,
-            #     message,
-            #     settings.DEFAULT_FROM_EMAIL,
-            #     [settings.ADMIN_EMAIL],
-            #     fail_silently=False,
-            # )
-            logging.info(f"Email: {subject}\n{message}")
+
+            # Create the EmailMessage
+            email = EmailMessage(
+                subject=subject,
+                body=message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=[settings.ADMIN_EMAIL],
+                reply_to=[inquiry_obj.business_email],
+            )
+
+            try:
+                email.send(fail_silently=False)
+            except Exception as e:
+                print(f"Failed to send email. Error: {e}")
+                raise
+
+            # For debugging/logging
             print(f"Subject: {subject}\n{message}")
+
             return redirect('contact_success')
+        else:
+            return render(request, 'contact.html', {'form': form})
     else:
         form = InquiryForm()
     return render(request, 'contact.html', {'form': form})

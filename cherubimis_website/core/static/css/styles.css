@@ -98,6 +98,16 @@ main {
   color: var(--white);
 }
 
+.nav-menu ul li:last-child a {
+  background: var(--brand-red); 
+  color: var(--white);
+}
+
+.nav-menu ul li:last-child a:hover {
+  background: var(--accent-sky); 
+  color: var(--white);
+
+}
 
 /* Hero Section */
 .hero-section {
@@ -1838,6 +1848,17 @@ main {
 .footer-nav a:hover {
   background: var(--accent-sky);
   color: var(--white);
+}
+
+.footer-nav ul li:last-child a {
+  background: var(--brand-red); 
+  color: var(--white);
+}
+
+.footer-nav ul li:last-child a:hover {
+  background: var(--accent-sky); 
+  color: var(--white);
+
 }
 
 
