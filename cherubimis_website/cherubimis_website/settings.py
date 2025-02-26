@@ -12,6 +12,15 @@ TRUSTED_HOSTS = ALLOWED_HOSTS
 # ALLOWED_HOSTS = ['*']
 # print('Allowed hosts:',ALLOWED_HOSTS)
 
+
+CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS.extend(
+        filter(
+        None,
+        os.environ.get('TRUSTED_HOSTS', '').split(','),
+    )
+)
+
 # Application definition
 
 INSTALLED_APPS = [
